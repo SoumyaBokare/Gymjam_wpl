@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GymJam - For You</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    />
+    <link rel="stylesheet" href="foryoupage.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">GymJam</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="wg.html">Workout Generator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="caloriecounter.html">Calorie Counter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="foryoupage.html">For You</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html" style="color: rgb(255, 205, 205);">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <h1 class="text-center mb-5">Your GymJam Dashboard</h1>
+
+      <!-- Conditional Membership ID Section -->
+      <section id="membership-id" class="mb-5">
+        <h2 class="section-title">Membership ID</h2>
+        <div class="card" id="membershipCard">
+          <div class="card-body">
+            <h5 class="card-title" id="membershipId">Your Membership ID: GJ12345</h5>
+            <p class="card-text">
+              Use this ID for all gym-related inquiries and to access exclusive
+              perks.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Membership Details Section -->
+      <section id="membership-details" class="mb-5">
+        <h2 class="section-title">Membership Details</h2>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Current Plan: Premium</h5>
+            <p class="card-text">Valid until: December 31, 2024</p>
+            <button
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#changePlanModal"
+            >
+              Change Plan
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trainers Section -->
+      <section id="trainers" class="mb-5">
+        <h2 class="section-title">Your Trainers</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Piyush Tyagi</h5>
+                <p class="card-text">Specialization: Strength Training</p>
+                <a href="#" class="btn btn-secondary">Book a Session</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tejas Kamath</h5>
+                <p class="card-text">Specialization: Yoga and Flexibility</p>
+                <a href="#" class="btn btn-secondary">Book a Session</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Membership Perks Section -->
+      <section id="membership-perks" class="mb-5">
+        <h2 class="section-title">Membership Perks</h2>
+        <ul class="list-group">
+          <li class="list-group-item">Unlimited access to all gym equipment</li>
+          <li class="list-group-item">Free group fitness classes</li>
+          <li class="list-group-item">
+            10% discount on personal training sessions
+          </li>
+          <li class="list-group-item">Access to sauna and swimming pool</li>
+          <li class="list-group-item">Exclusive member-only events</li>
+        </ul>
+      </section>
+
+      <!-- Exclusive Content Section -->
+      <div class="container mt-5" id="exclusive-content">
+        <h2 class="text-center mb-5">Exclusive Content for Premium Members</h2>
+
+        <!-- Generate 10 pieces of exclusive content -->
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="assets/images/cycling.jpg" alt="Alt Image" class="card-img-top" style="padding-bottom: 10px;"/>
+                <h5 class="card-title">Strength Building 101</h5>
+                <p class="card-text">
+                  Learn the fundamentals of strength training for muscle growth.
+                </p>
+                <button id="exclusiveAccessBtn" class="btn btn-primary">
+                  Access Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="assets/images/cycling.jpg" alt="Alt Image" class="card-img-top" style="padding-bottom: 10px;"/>
+                <h5 class="card-title">Meditation and Mindfulness</h5>
+                <p class="card-text">
+                  Enhance your mental well-being with these techniques.
+                </p>
+                <button id="exclusiveAccessBtn" class="btn btn-primary">
+                  <a href="./meditation.html" class="anchor">Access Now</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 more content cards for a total of 10 -->
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="assets/images/cycling.jpg" alt="Alt Image" class="card-img-top" style="padding-bottom: 10px;"/>
+                <h5 class="card-title">Cardio Endurance Challenge</h5>
+                <p class="card-text">
+                  Take your cardio to the next level with this endurance routine.
+                </p>
+                <button id="exclusiveAccessBtn" class="btn btn-primary">
+                  <a href="./cardio.html" class="anchor">Access Now</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="assets/images/cycling.jpg" alt="Alt Image" class="card-img-top" style="padding-bottom: 10px;"/>
+                <h5 class="card-title">Recovery: Importance of Rest Days</h5>
+                <p class="card-text">
+                  Understand how recovery can boost your fitness goals.
+                </p>
+                <button id="exclusiveAccessBtn" class="btn btn-primary">
+                  <a href="./cyclist.html" class="anchor">Access Now</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="assets/images/cycling.jpg" alt="Alt Image" class="card-img-top" style="padding-bottom: 10px;"/>
+                <h5 class="card-title">Powerlifting Guide</h5>
+                <p class="card-text">
+                  Learn the techniques of powerlifting for serious strength.
+                </p>
+                <button id="exclusiveAccessBtn" class="btn btn-primary">
+                  <a href="./powerlifting.html" class="anchor">Access Now</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="assets/images/cycling.jpg" alt="Alt Image" class="card-img-top" style="padding-bottom: 10px;"/>
+                <h5 class="card-title">Nutrition for Fitness</h5>
+                <p class="card-text">
+                  Discover the best nutrition practices to support your workouts.
+                </p>
+                <button id="exclusiveAccessBtn" class="btn btn-primary">
+                  <a href="./nutrition.html" class="anchor">Access Now</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="assets/images/cycling.jpg" alt="Alt Image" class="card-img-top" style="padding-bottom: 10px;"/>
+                <h5 class="card-title">Mental Toughness Training</h5>
+                <p class="card-text">
+                  Build your mental strength to push through tough workouts.
+                </p>
+                <button id="exclusiveAccessBtn" class="btn btn-primary">
+                  <a href="./mental_toughness.html" class="anchor">Access Now</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="assets/images/cycling.jpg" alt="Alt Image" class="card-img-top" style="padding-bottom: 10px;"/>
+                <h5 class="card-title">Core Strength Workouts</h5>
+                <p class="card-text">
+                  Enhance your core strength with these effective exercises.
+                </p>
+                <button id="exclusiveAccessBtn" class="btn btn-primary">
+                  <a href="./core_strength.html" class="anchor">Access Now</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="assets/images/cycling.jpg" alt="Alt Image" class="card-img-top" style="padding-bottom: 10px;"/>
+                <h5 class="card-title">Fat Loss Strategies</h5>
+                <p class="card-text">
+                  Discover the best strategies for effective fat loss.
+                </p>
+                <button id="exclusiveAccessBtn" class="btn btn-primary">
+                  <a href="./fat_loss.html" class="anchor">Access Now</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // Function to generate a random Membership ID
+      function generateMembershipId() {
+        const prefix = 'GJ';
+        const randomNum = Math.floor(10000 + Math.random() * 90000); // Generates a random number between 10000 and 99999
+        return prefix + randomNum; // Combines the prefix with the random number
+      }
+
+      // Set the generated Membership ID in the DOM
+      document.getElementById('membershipId').innerText += generateMembershipId();
+
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+          $('.navbar').addClass('scrolled');
+        } else {
+          $('.navbar').removeClass('scrolled');
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymJam</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <img src="assets/images/mike-wasowski.gif" alt="GymJam Logo" class="logo" style="width: 270px; padding-bottom: 10px; border-radius: 20px;">
+        <div class="heading">Sign Up</div>
+        <form id="signup-form" class="form">
+            <input required class="input" type="text" name="username" id="username" placeholder="Username">
+            <input required class="input" type="email" name="email" id="email" placeholder="E-mail">
+            <input required class="input" type="password" name="password" id="password" placeholder="Password">
+            <span class="forgot-password"><a href="#">Forgot Password?</a></span>
+            <input class="login-button" type="submit" value="Sign Up">
+        </form>
+        <span class="agreement"><a href="#">Learn user licence agreement</a></span>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Signup form submission
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Send data to backend
+            fetch('http://localhost:3000/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, email, password })
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Set login flag in local storage
+                    localStorage.setItem('isLoggedIn', 'true');
+                    
+                    // Redirect to home2.html
+                    window.location.href = 'home2.html';
+                } else {
+                    alert('Signup failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Signup failed');
+            });
+        });
+    </script>
+</body>
+</html>

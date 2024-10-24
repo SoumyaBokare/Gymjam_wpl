@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentagon Muscle Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            margin-bottom: 20px;
+        }
+
+        canvas {
+            background-color: #fff;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+        }
+
+        .muscle-controls button {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .muscle-controls button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Muscle Tracker Pentagon</h1>
+        <canvas id="pentagonChart" width="400" height="400"></canvas>
+    </div>
+
+    <div class="muscle-controls">
+        <button onclick="increaseMuscle('Chest')">Increase Chest</button>
+        <button onclick="increaseMuscle('Back')">Increase Back</button>
+        <button onclick="increaseMuscle('Legs')">Increase Legs</button>
+        <button onclick="increaseMuscle('Arms')">Increase Arms</button>
+        <button onclick="increaseMuscle('Core')">Increase Core</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Initial muscle values
+        let muscleValues = {
+            Chest: 2,
+            Back: 2,
+            Legs: 2,
+            Arms: 2,
+            Core: 2
+        };
+
+        // Draw the pentagon using Chart.js
+        const ctx = document.getElementById('pentagonChart').getContext('2d');
+        let pentagonChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Chest', 'Back', 'Legs', 'Arms', 'Core'],
+                datasets: [{
+                    label: 'Muscle Strength',
+                    data: Object.values(muscleValues),
+                    backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                    borderColor: '#3498db',
+                    pointBackgroundColor: '#3498db',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#3498db'
+                }]
+            },
+            options: {
+                scale: {
+                    ticks: {
+                        beginAtZero: true,
+                        max: 10
+                    }
+                }
+            }
+        });
+
+        // Function to increase muscle value and update pentagon
+        function increaseMuscle(muscle) {
+            if (muscleValues[muscle] < 10) {
+                muscleValues[muscle] += 1;
+            }
+            updatePentagon();
+        }
+
+        // Function to update the pentagon chart
+        function updatePentagon() {
+            pentagonChart.data.datasets[0].data = Object.values(muscleValues);
+            pentagonChart.update();
+        }
+    </script>
+</body>
+</html>

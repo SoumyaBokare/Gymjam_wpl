@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powerlifting Exercises</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="wg.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">GymJam</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="wg.html">Workout Generator</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="caloriecounter.html">Calorie Counter</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="foryoupage.html">For You</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="login.html" style="color: rgb(255, 205, 205);">Logout</a>
+                  </li>
+              </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main>
+            <div class="image-container">
+                <div class="sketchfab-embed-wrapper">
+                    <iframe title="muscle anatomy" class="centered-iframe" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" 
+                            allow="autoplay; fullscreen; xr-spatial-tracking" 
+                            src="https://sketchfab.com/models/d32f5724fc294048888d03d215b9a1ff/embed"> 
+                    </iframe>
+                </div>
+            </div>
+
+            <section id="cycling">
+                <h2>Exercises for Cyclists</h2>
+                <h3>Leg Strength</h3>
+                <ul>
+                    <li><strong>Single-Leg Squats:</strong> 
+                        <ul>
+                            <li>Targets: Quadriceps, hamstrings, glutes.</li>
+                            <li>Effectiveness: Improves balance, single-leg strength, and stability, which are key for cycling performance.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Step-Ups:</strong> 
+                        <ul>
+                            <li>Targets: Quadriceps, hamstrings, glutes.</li>
+                            <li>Effectiveness: Builds leg strength and mimics the pedal stroke motion.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Bulgarian Split Squats:</strong> 
+                        <ul>
+                            <li>Targets: Quadriceps, glutes, hamstrings.</li>
+                            <li>Effectiveness: Strengthens the lower body and improves balance, vital for cyclists.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Core Stability</h3>
+                <ul>
+                    <li><strong>Plank Variations:</strong> 
+                        <ul>
+                            <li>Targets: Core, shoulders, lower back.</li>
+                            <li>Effectiveness: Helps maintain posture and stability while cycling, especially on longer rides.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Dead Bug:</strong> 
+                        <ul>
+                            <li>Targets: Core, lower back.</li>
+                            <li>Effectiveness: Strengthens core stability and coordination, important for maintaining a strong cycling posture.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Russian Twists:</strong> 
+                        <ul>
+                            <li>Targets: Obliques, core.</li>
+                            <li>Effectiveness: Enhances rotational strength and improves stability during dynamic cycling movements.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Flexibility & Mobility</h3>
+                <ul>
+                    <li><strong>Hamstring Stretch:</strong> 
+                        <ul>
+                            <li>Targets: Hamstrings, lower back.</li>
+                            <li>Effectiveness: Improves flexibility in the legs, helping cyclists maintain a comfortable riding position.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Hip Flexor Stretch:</strong> 
+                        <ul>
+                            <li>Targets: Hip flexors, quads.</li>
+                            <li>Effectiveness: Loosens up the hip flexors, which can become tight from prolonged sitting on the bike.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Foam Rolling:</strong> 
+                        <ul>
+                            <li>Targets: Entire lower body.</li>
+                            <li>Effectiveness: Helps relieve muscle tension and improves blood flow to the muscles, aiding in recovery.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            
+
+        </main>
+    </div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+            $('.navbar').addClass('scrolled');
+        } else {
+            $('.navbar').removeClass('scrolled');
+        }
+    });
+</script>
+
+</html>

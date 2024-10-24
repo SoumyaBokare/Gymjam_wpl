@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymJam</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">GymJam</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="home.html">Home</a>
+              </li>
+              <li class="nav-item requires-login">
+                  <a class="nav-link" href="wg.html">Workout Generator</a>
+              </li>
+              <li class="nav-item requires-login">
+                  <a class="nav-link" href="caloriecounter.html">Calculator</a>
+              </li>
+              <li class="nav-item requires-login">
+                  <a class="nav-link" href="foryoupage.html">For You </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-login" href="login.html">Get started</a>
+              </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+
+  <section id="home" class="d-flex align-items-center justify-content-center">
+    <div class="gym-photo">
+      <video autoplay muted loop class="background-video">
+        <source src="./assets/videos/Sony A7S III X Fitness Commercial.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="container position-relative text-container">
+        <h1>Welcome to GymJam</h1>
+        <h2><i>- "Change can be tough, but you know what's tougher? Letting a lack of drive hold you back from pushing your limits and making real progress." -</i></h2>
+        <a href="#onwards-about" class="btn-get-started scrollto">Get Started</a>
+      </div>
+    </div>
+  </section>
+  
+  <div id="onwards-about"></div>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="assets/images/genericimage.png" class="img-fluid" alt="Generic Image">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 owners">
+                    <h3 style="padding-top: 20px;"><strong>GymJam</strong></h3>
+                    <p>
+                        GymJam was founded in with the goal of becoming a digital health model service aimed at providing modern health services and education to users. GymJam is passionate about bringing benefits in the field of health to its users and is ready to pioneer advancements in health and sports in the information and technology sector.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="assets/images/piyushtyagi.png" class="profile-img" alt="Piyush Tyagi">
+                            <h5><strong>Tejas Kamath</strong></h5>
+                            <h6>Chief Executive Officer</h6>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="assets/images/tejas.png" class="profile-img" alt="Tejas Kamath">
+                            <h5><strong>Piyush Tyagi</strong></h5>
+                            <h6>Chief Operating Officer</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <section id="offer" class="offer">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2>Our Offer</h2>
+          </div>
+          <div class="row" style="display: flex; justify-content: center;">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box iconbox-blue">
+                <img src="./assets/icons/weight-lifting-down.png" style="width: 100px;" alt="Weight Lifting Icon">
+
+                <h4 class="icon-box-title">Workout Generator</h4>
+                <p>
+                  We have science based workout generators which provide you with a workout plan based on what muscle group you want to target and train for peak hypertrophy.
+                </p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon-box iconbox-orange">
+                <img src="./assets/icons/calculator.png" style="width: 100px;" alt="Calculator Icon">
+
+                <h4 class="icon-box-title">Calculators</h4>
+                <p>
+                  We have a variety of calculators to help you track your progress and set goals. These include calorie calculators, FFMI calculators.
+                </p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon-box iconbox-teal">
+                <img src="./assets/icons/calendar.png" style="width: 100px;" alt="Calendar Icon">
+
+                <h4 class="icon-box-title">Personalised Trackers</h4>
+                <p>
+                    We have personalised trackers to help you track your progress and set goals. These include calorie trackers, workout trackers and more.
+                </p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon-box iconbox-orange">
+                <img src="./assets/icons/camp-cooking-pot.png" style="width: 100px;" alt="Cooking Pot Icon">
+
+                <h4 class="icon-box-title">Nutrition Consultant</h4>
+                <p>
+                    This Nutrition Consultation Service allows users to directly consult with our nutrition consultants regarding the necessary nutritional needs.
+                </p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+              <div class="icon-box iconbox-green">
+                <img src="./assets/icons/healing.png" style="width: 100px;" alt="Healing Icon">
+                <h4 class="icon-box-title">Health Consultant</h4>
+                <p>
+                    This Health Consultation Service allows users to directly consult with our health consultants regarding their health concerns. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" class="cta">
+        <div class="container">
+          <div class="text-center">
+            <h3 class="cta-title">Are You Ready to Join Us?</h3>
+            <p>Sign up now and make use of our free features.</p>
+            <a class="cta-btn" href="login.html">Join Now</a>
+          </div>
+        </div>
+      </section>
+    <section id="contact" class="contact">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2>Contact</h2>
+            <p>Feel free to talk to us if you still have any questions about GymJam.</p>
+          </div>
+  
+          <div class="row">
+  
+  <!--          <div class="col-lg-6">-->
+  
+    <div class="row">
+      <div class="col-md-6">
+        <div class="info-box">
+          <i class="bx bx-map"></i>
+          <h3>Our Address</h3>
+          <p>Somaiya Vidyavihar University,<br>
+            Vidyanagar,<br>
+            Near Vivekanand Education Society,<br>
+            Mumbai - 400077,<br>
+            Maharashtra, India.
+          </p>
+        </div>
+      </div>
+    
+      <div class="col-md-6">
+        <div class="info-box">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.6762845560457!2d72.89753797421046!3d19.07600048141654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c82cd03b6a2b%3A0x2b17a1c65bbf1150!2sSomaiya%20Vidyavihar%20University!5e0!3m2!1sen!2sin!4v1695091000000!5m2!1sen!2sin" 
+            class="iframe-map" 
+            allowfullscreen="" 
+            title="Somaiya Vidyavihar University Location">
+          </iframe>
+        </div>
+      </div>
+    
+      <div class="col-md-6">
+        <div class="info-box mt-4">
+          <i class="bx bx-envelope"></i>
+          <h3>Email Us</h3>
+          <p>infogymjam@gmail.com<br>contactgymjam@gmail.com</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="info-box mt-4">
+          <i class="bx bx-phone-call"></i>
+          <h3>Call Us</h3>
+          <p>+91 1234567890<br>+91 0987654321</p>
+        </div>
+      </div>
+    </div>
+    
+        </div>
+      </section>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+            $('.navbar').addClass('scrolled');
+        } else {
+            $('.navbar').removeClass('scrolled');
+        }
+    });
+
+    // Check if user is logged in
+    var isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+    if (isLoggedIn) {
+        $('.requires-login').show();
+    } else {
+        $('.requires-login').hide();
+    }
+</script>
+
+</html>
